@@ -66,3 +66,5 @@ end
 
 
 gem "rspec", "~> 3.11"
+
+gem 'rack-cors', :require => 'rack/cors'
