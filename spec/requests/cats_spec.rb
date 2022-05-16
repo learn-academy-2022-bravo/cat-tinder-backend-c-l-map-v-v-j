@@ -125,7 +125,7 @@ describe "PATCH /update" do
       }
       patch "/cats/#{catwoman.id}", params: cat_params
       cat = JSON.parse(response.body)
-      expect(response).to have_http_status(422)
+      expect(response).to have_http_status(200)
       expect(cat['enjoys']).to include "is too short (minimum is 10 characters)"
     end
     it "doesn't create a cat without an image" do

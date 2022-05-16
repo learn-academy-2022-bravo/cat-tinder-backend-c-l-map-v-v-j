@@ -19,7 +19,7 @@ RSpec.describe Cat, type: :model do
       expect(cat.errors[:image]).to_not be_empty
     end
     it "enjoys must have a minimum length of 10" do
-      cat = Cat.create name:"Mr. Stark", age:4, enjoys:"Chewing on bags", image:"https://upload.wikimedia.org/wikipedia/commons/3/38/Adorable-animal-cat-20787.jpg"
+      cat = Cat.create name:"Mr. Stark", age:4, enjoys:"", image:"https://upload.wikimedia.org/wikipedia/commons/3/38/Adorable-animal-cat-20787.jpg"
       expect(cat.errors[:enjoys]).to_not be_empty
     end
   end
